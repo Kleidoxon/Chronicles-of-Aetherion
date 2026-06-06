@@ -1,0 +1,4 @@
+class OrbitalCity:
+    def __init__(self, name):
+        self.name = name
+        self.population = 100000
