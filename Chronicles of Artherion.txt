@@ -1,0 +1,1232 @@
+CHRONICLES OF AETHERION
+Complete Game Design, Engine Architecture & Full Feature System
+1. GAME OVERVIEW
+Title
+
+Chronicles of Aetherion
+
+Genre
+
+Steampunk • Dark Fantasy • Industrial Civilization Simulator • Political Sandbox • Economic Simulation • Tactical RPG • Dynamic AI Sandbox • Persistent World Simulator
+
+Core Experience
+
+Chronicles of Aetherion is a massive fully simulated industrial world where:
+
+AI factions evolve independently
+NPCs live complete lives
+Economies fluctuate dynamically
+Wars happen naturally
+Cities grow or collapse
+Companies compete
+Environments permanently change
+Magic corrupts reality
+Political systems evolve
+History writes itself
+
+The player is NOT the center of the world.
+
+The world continues evolving even without player interaction.
+
+2. CORE GAME ENGINE
+PRIMARY ENGINE ARCHITECTURE
+A. Deterministic Offline Simulation Engine
+
+The entire game operates offline.
+
+Systems continuously simulate:
+
+Economy
+NPC behavior
+Politics
+Faction wars
+Supply chains
+Environment
+Transportation
+Industrial growth
+Trade
+Crime
+Population movement
+B. Real-Time AI Civilization Engine
+
+AI acts independently.
+
+NPCs and factions:
+
+Wage wars
+Create alliances
+Expand territory
+Build industries
+Manipulate markets
+Conduct espionage
+Restore environments
+Cause revolutions
+
+AI never waits for player turns.
+
+C. Utility AI System
+
+NPCs evaluate:
+
+Hunger
+Fear
+Wealth
+Loyalty
+Opportunity
+Political stability
+Survival chance
+Economic benefit
+
+Then select the highest-value action.
+
+D. Behavior Tree AI System
+
+Used for:
+
+Combat
+Guards
+Military tactics
+Creature hunting
+City defense
+E. Event-Driven Simulation Engine
+
+Tracks:
+
+Wars
+Industrial disasters
+Trade booms
+Riots
+Elections
+Assassinations
+Market crashes
+Environmental collapse
+Scientific discoveries
+F. Persistent World Engine
+
+Everything permanently persists:
+
+NPC memory
+Crime
+Politics
+Economy
+Environmental damage
+Infrastructure
+Businesses
+Historical records
+G. Simulation Layer System
+
+To optimize performance:
+
+High Simulation
+
+Nearby regions:
+
+Full NPC simulation
+Combat
+Economy
+AI behavior
+Medium Simulation
+
+Neighboring regions:
+
+Simplified AI simulation
+Low Simulation
+
+Far regions:
+
+Statistical simulation only
+H. Tick-Based Update System
+
+Different systems update at different speeds.
+
+Every Second
+Combat
+Immediate AI actions
+Every Minute
+Economy
+NPC movement
+Every Hour
+Politics
+Transportation
+Every Day
+Global economy
+Wars
+Industrial growth
+3. WORLD OF AETHERION
+MAJOR REGIONS
+Ironveil Capital
+
+Industrial mega-city.
+
+Features:
+
+Noble houses
+Massive factories
+Corruption
+Politics
+Government headquarters
+Rust Barrens
+
+Wasteland of ruined war machines.
+
+Features:
+
+Salvaging
+Mining
+Rogue machines
+Ancient battlefields
+Blackwater Docks
+
+Crime-ridden harbor city.
+
+Features:
+
+Smuggling
+Piracy
+Black markets
+Illegal trade
+Skyreach Spires
+
+Floating scientific metropolis.
+
+Features:
+
+Airships
+Ether research
+Elite aristocracy
+Advanced technology
+The Underdeep
+
+Ancient underground machine civilization.
+
+Features:
+
+Machine gods
+Horror exploration
+Forbidden technology
+Reality anomalies
+4. CHARACTER SYSTEM
+PRIMARY ATTRIBUTES
+Strength
+Agility
+Endurance
+Intelligence
+Perception
+Charisma
+Willpower
+Ether Affinity
+SECONDARY ATTRIBUTES
+Health
+Steam Capacity
+Mana
+Sanity
+Critical Chance
+Accuracy
+Carry Weight
+Heat Resistance
+Mechanical Efficiency
+CHARACTER BACKGROUNDS
+Steam Engineer
+Ether Alchemist
+Railway Gunslinger
+Airship Corsair
+Clockwork Assassin
+Imperial Noble
+LEVEL SYSTEM
+Level 1 → Level 200
+LEVEL BRACKETS
+Levels 1–25
+
+Street Survivor
+
+Levels 26–50
+
+Industrial Operative
+
+Levels 51–75
+
+Regional Power
+
+Levels 76–100
+
+Continental Figure
+
+Levels 101–150
+
+Legendary Industrialist
+
+Levels 151–200
+
+Ascendant Entity
+
+5. MASSIVE SKILL TREE SYSTEM
+COMBAT TREES
+Gunslinger
+Heavy Weapons
+Duelist
+Steam Knight
+Sniper
+Demolitionist
+Beast Hunter
+Airship Commander
+ENGINEERING TREES
+Steam Engineering
+Automation
+Robotics
+Weapon Crafting
+Railway Systems
+Airship Mechanics
+Industrial Engineering
+SURVIVAL TREES
+Fishing
+Hunting
+Cooking
+Medicine
+Tracking
+Toxic Resistance
+Scavenging
+SOCIAL TREES
+Diplomacy
+Leadership
+Negotiation
+Manipulation
+Intimidation
+Espionage
+Propaganda
+GOVERNANCE TREES
+Taxation
+Public Welfare
+Military Administration
+Industrial Policy
+Economic Planning
+Legal Authority
+ECONOMIC TREES
+Trading
+Logistics
+Smuggling
+Market Manipulation
+Corporate Management
+Resource Optimization
+MAGIC TREES
+Ether Manipulation
+
+Reality distortion magic.
+
+Blood Alchemy
+
+Life-force conversion magic.
+
+Machine Ritualism
+
+Machine-based ritual engineering.
+
+Void Invocation
+
+Dark dimensional magic.
+
+Chronomancy
+
+Time manipulation magic.
+
+Reality Distortion
+
+Physics-breaking abilities.
+
+Soul Engineering
+
+Soul extraction and reconstruction.
+
+Astral Projection
+
+Mind separation and astral travel.
+
+Corruption Magic
+
+Mutating Ether manipulation.
+
+Runic Engineering
+
+Industrial rune-based magic.
+
+FORBIDDEN MAGIC TREES
+Machine God Communion
+Flesh Reconstruction
+Ether Mutation
+Dimensional Breach
+Temporal Collapse
+6. ARCANE CODEX SYSTEM
+MAGIC ARCHIVE SYSTEM
+
+Every spell contains complete data.
+
+SPELL INFORMATION
+Basic Data
+Name
+Tier
+Affinity
+Discovery date
+Inventor
+Legality status
+Combat Data
+Damage
+Damage type
+Range
+AOE radius
+Accuracy modifier
+Penetration
+Cooldown
+Mana cost
+Ether cost
+Heat generation
+Sanity cost
+Corruption risk
+Tactical Data
+Crowd control
+Armor melting
+Time manipulation
+Area denial
+Summoning
+Fear induction
+Environmental Data
+Fire spread
+Terrain corruption
+Weather changes
+Water contamination
+Structural destruction
+Side Effects
+Mutation chance
+Ether poisoning
+Temporal instability
+Hallucinations
+Soul degradation
+AI Tactical Evaluation
+
+AI evaluates:
+
+Battlefield efficiency
+Friendly fire risk
+Resource cost
+Environmental damage
+7. TURN-BASED TACTICAL COMBAT SYSTEM
+COMBAT PHASES
+Initiative Phase
+
+Determines combat order.
+
+Tactical Decision Phase
+
+Actions:
+
+Attack
+Defend
+Reload
+Repair
+Cast magic
+Use items
+Command allies
+Escape
+Negotiate
+Resolution Phase
+
+Calculates:
+
+Damage
+Armor
+Critical hits
+Steam pressure
+Status effects
+Environmental Reaction Phase
+
+Battlefield changes dynamically:
+
+Fire spreads
+Steam pipes explode
+Buildings collapse
+Ether storms appear
+COMBAT FEATURES
+Limb targeting
+Cover system
+Tactical positioning
+Ammunition management
+Heat buildup
+Weapon durability
+Fear system
+STATUS EFFECTS
+Burning
+Corrosion
+Bleeding
+Shock
+Radiation
+Ether Corruption
+Madness
+Paralysis
+Hallucinations
+Time Distortion
+COMBAT TYPES
+Duel combat
+Group combat
+Siege warfare
+Airship battles
+Assassination missions
+Creature hunts
+8. UNIVERSAL CODEX SYSTEM
+THE GREAT ARCHIVE
+
+Records EVERYTHING discovered in the game.
+
+CODEX CATEGORIES
+World Archive
+Cities
+Regions
+Infrastructure
+Environment
+Character Archive
+NPCs
+Leaders
+Criminals
+Historical figures
+Creature Archive
+Habitats
+Weaknesses
+Mutation stages
+Behavior
+Technology Archive
+Airships
+Weapons
+Machines
+Automation
+Magic Archive
+Rituals
+Ether manipulation
+Forbidden knowledge
+Machine gods
+Political Archive
+Wars
+Elections
+Revolutions
+Treaties
+Economic Archive
+Market history
+Trade routes
+Company rankings
+Resource values
+Personal Archive
+Crimes
+Relationships
+Achievements
+Choices
+9. WORLD LOG SYSTEM
+
+Separate from the Codex.
+
+Records EVERYTHING dynamically happening in the world.
+
+WORLD LOG TRACKS
+Wars
+Assassinations
+Market crashes
+Creature migration
+Infrastructure construction
+Elections
+Riots
+Industrial disasters
+Environmental collapse
+10. MASSIVE BESTIARY SYSTEM
+CREATURE TIER GRADES
+Common
+
+Minor threats.
+
+Examples:
+
+Steam Rats
+Rust Leeches
+Uncommon
+
+Dangerous wildlife.
+
+Examples:
+
+Iron Hounds
+Furnace Spiders
+Deadly
+
+Major threats.
+
+Examples:
+
+Ether Wraiths
+Steam Trolls
+Major Deadly
+
+Regional threats.
+
+Examples:
+
+Furnace Titans
+Abyssal Crawlers
+Legendary
+
+World-famous entities.
+
+Examples:
+
+Brass Leviathan
+Clockmaker Saint
+Godlike
+
+Reality-altering beings.
+
+Examples:
+
+Machine Gods
+Void Monarchs
+Ether Titans
+CREATURE SYSTEMS
+
+Creatures possess:
+
+Hunting behavior
+Migration
+Nesting
+Territorial control
+Mutation evolution
+Environmental interaction
+11. REAL-TIME AI CIVILIZATION SYSTEM
+
+AI operates independently from the player.
+
+AI DECISION FACTORS
+Affinity
+Ideology
+Wealth
+Fear
+Resources
+Territory pressure
+Economy
+Reputation
+AI ACTIONS
+
+AI may:
+
+Wage wars
+Expand territory
+Create companies
+Manipulate markets
+Restore ecosystems
+Build infrastructure
+Conduct espionage
+Start rebellions
+WAR DECLARATION SYSTEM
+
+Wars begin because of:
+
+Territorial disputes
+Resource shortages
+Religious conflict
+Economic collapse
+Political assassination
+Historical hatred
+WAR CONSEQUENCE SYSTEM
+Loser Effects
+
+Long-term consequences:
+
+Economic collapse
+Infrastructure destruction
+Refugee crises
+Crime increase
+Population decline
+Public unrest
+Winner Spoils System
+
+Spoils calculated using:
+
+Territory captured
+Resource stockpiles
+Enemy infrastructure value
+Economic damage inflicted
+War duration
+WINNER PERKS
+
+Temporary and permanent rewards:
+
+Tax increase
+Resource control
+Trade dominance
+Political influence
+Military morale
+12. ENVIRONMENTAL SYSTEM
+ENVIRONMENTAL STATES
+Healthy
+Polluted
+Toxic
+Collapsing
+Permanently Damaged
+ENVIRONMENTAL DAMAGE
+
+Caused by:
+
+Industrialization
+War
+Ether corruption
+Pollution
+Overharvesting
+Mining
+PERMANENT DAMAGE SYSTEM
+
+Mining permanently damages:
+
+Terrain
+Water systems
+Ecosystems
+
+Cannot fully recover.
+
+RESTORATION SYSTEM
+
+Players and AI may restore:
+
+Forests
+Oceans
+Wildlife
+Roads
+Rivers
+RESTORATION METHODS
+Reforestation
+Pollution cleanup
+Infrastructure repair
+Wildlife programs
+13. HARVESTING SYSTEM
+HARVESTABLE ENVIRONMENTS
+Sea
+Fish
+Coral
+Seaweed
+Oil
+Forest
+Wood
+Herbs
+Animals
+Mushrooms
+Mountains
+Stone
+Metals
+Gems
+Rivers
+Freshwater fish
+Clay
+Minerals
+RESOURCE PROCESSING
+
+Resources may be:
+
+Crafted
+Cooked
+Refined
+Sold
+Smuggled
+Exported
+OVERHARVESTING CONSEQUENCES
+Resource scarcity
+Extinction
+Price inflation
+Ecosystem imbalance
+14. FACTION SYSTEM
+MAJOR FACTIONS
+Iron Empire
+Ember Resistance
+Gearwright Consortium
+Church of Ascension
+Blackwater Syndicate
+FACTION FEATURES
+Territory control
+Diplomacy
+Espionage
+Wars
+Trade agreements
+Political influence
+15. OWNERSHIP SYSTEM
+OWNABLE ESTABLISHMENTS
+Industrial
+Mines
+Refineries
+Factories
+Rail companies
+Civilian
+Taverns
+Restaurants
+Hotels
+Clinics
+Military
+Mercenary companies
+Security forces
+Smuggling operations
+OWNERSHIP STRUCTURE
+Requirements
+Licenses
+Capital
+Infrastructure
+Reputation
+Staff
+Perks
+Passive income
+Political influence
+Resource access
+Trade bonuses
+Consequences
+Taxes
+Salaries
+Corruption
+Supply shortages
+Worker morale
+Sabotage
+16. STAFF MANAGEMENT SYSTEM
+STAFF ROLES
+Executive
+Managers
+Lawyers
+Accountants
+Logistics directors
+Industrial
+Engineers
+Mechanics
+Miners
+Researchers
+Security
+Guards
+Mercenaries
+Detectives
+Social
+Doctors
+Bartenders
+Propaganda officers
+STAFF SYSTEMS
+
+Tracks:
+
+Salary
+Happiness
+Loyalty
+Efficiency
+Exhaustion
+Corruption
+STAFF CONSEQUENCES
+
+Low morale causes:
+
+Theft
+Espionage
+Sabotage
+Strikes
+17. CITY GOVERNANCE SYSTEM
+GOVERNANCE RANKS
+District Overseer
+Governor
+Provincial Ruler
+Industrial Chancellor
+GOVERNANCE FEATURES
+
+Control:
+
+Taxes
+Laws
+Welfare
+Infrastructure
+Industry regulation
+Military funding
+CITY SPECIALIZATION
+Industrial Cities
+
+Production bonuses.
+
+Scientific Cities
+
+Research bonuses.
+
+Military Cities
+
+Recruitment bonuses.
+
+GOVERNANCE CONSEQUENCES
+
+Poor governance causes:
+
+Riots
+Rebellion
+Corruption
+Economic decline
+18. REAL-TIME ECONOMY SYSTEM
+ECONOMIC STATES
+Industrial Boom
+Stable Economy
+Inflation
+Recession
+Wartime Economy
+Technological Revolution
+INDUSTRIAL EVENTS
+Positive
+Railway expansion
+Resource discoveries
+Negative
+Factory explosion
+Mine collapse
+Mixed
+Automation revolution
+MARKET SIMULATION
+
+Markets respond dynamically to:
+
+Supply
+Demand
+War
+Transportation
+Population
+Politics
+MARKET MANIPULATION
+
+Player and AI may:
+
+Create monopolies
+Crash markets
+Cause shortages
+Control trade routes
+19. SUPPLY CHAIN SYSTEM
+Resource → Transportation → Storage → Manufacturing → Distribution → Consumer
+TRANSPORTATION NETWORK
+Railways
+Cargo fleets
+Air routes
+Smuggling tunnels
+DELIVERY SYSTEM
+
+Affected by:
+
+Weather
+Distance
+Infrastructure
+Piracy
+Government inspection
+20. TAXATION SYSTEM
+TAX CALCULATION
+
+Based on:
+
+Assets
+Revenue
+Territory
+Infrastructure
+Workforce
+Reputation
+TAX REPRESENTATIVE SYSTEM
+
+Officials physically collect taxes.
+
+Possible actions:
+
+Pay
+Bribe
+Negotiate
+Threaten
+Evade
+GOVERNMENT REVENUE SYSTEM
+
+Taxes fund:
+
+Military
+Infrastructure
+Welfare
+Expansion
+21. AIRSHIP SYSTEM
+
+Upgradeable:
+
+Hull
+Engines
+Cannons
+Cargo
+Steam core
+AIRSHIP FEATURES
+Air combat
+Exploration
+Cargo transport
+Mobile base
+22. CRAFTING & ENGINEERING
+CRAFTING TYPES
+Weaponsmithing
+Alchemy
+Automation
+Industrial construction
+BUILDABLE OBJECTS
+Automatons
+Turrets
+Factories
+Workshops
+23. ITEM SYSTEM
+ITEM TIERS
+Common
+Uncommon
+Rare
+Elite
+Epic
+Legendary
+Mythic
+Godly
+HIGH-TIER FEATURES
+Passive abilities
+Unique attacks
+Environmental effects
+Reality manipulation
+24. SURVIVAL SYSTEM
+
+Tracks:
+
+Hunger
+Hydration
+Fatigue
+Sanity
+Poison
+Radiation
+Heat exposure
+25. MORALITY & CORRUPTION SYSTEM
+
+Tracks:
+
+Humanity
+Honor
+Greed
+Cruelty
+Corruption
+ETHER CORRUPTION
+
+Causes:
+
+Mutation
+Hallucinations
+Insanity
+Reality distortion
+26. RESEARCH & INVENTION SYSTEM
+
+Players and AI may invent:
+
+Machines
+Medicines
+Weapons
+Industrial technologies
+27. MEDIA & PROPAGANDA SYSTEM
+
+Newspapers report:
+
+Wars
+Elections
+Crimes
+Economic changes
+PROPAGANDA SYSTEM
+
+Influences:
+
+Elections
+Loyalty
+Revolutions
+Public opinion
+28. LAW & LEGAL SYSTEM
+
+Includes:
+
+Courts
+Warrants
+Corruption
+Investigations
+Prisons
+29. UNION & LABOR SYSTEM
+
+Workers may:
+
+Strike
+Revolt
+Sabotage
+Unionize
+30. QUEST SYSTEM
+
+Includes:
+
+Main story
+Procedural missions
+Political missions
+Creature hunts
+Smuggling
+Assassinations
+31. ENDGAME SYSTEM
+
+Possible endings:
+
+Industrial Emperor
+Revolutionary Liberator
+Machine Ascension
+Ether Cataclysm
+Machine God Awakening
+32. SAVE SYSTEM
+
+Stores:
+
+World state
+NPC memory
+Politics
+Economy
+Businesses
+Environment
+Historical timeline
+33. TECHNICAL ARCHITECTURE
+RECOMMENDED STACK
+Backend
+
+Python 3.14
+
+Database
+
+PostgreSQL
+
+Frontend
+
+React + Electron
+
+Prototype
+
+Python terminal UI using Textual
+
+AI SYSTEMS
+
+Uses:
+
+Utility AI
+Behavior trees
+Statistical simulation
+Event-driven systems
+Persistent memory
+34. DEPLOYMENT SYSTEM
+Prototype Launch
+python main.py
+Backend Launch
+uvicorn app:app
+Frontend Launch
+npm run dev
+BUILD TOOLS
+PyInstaller
+Electron Builder
+
+Outputs:
+
+Windows EXE
+Linux AppImage
+Mac DMG
+35. FULL PYTHON MODULE STRUCTURE
+project/
+│
+├── main.py
+├── config.py
+├── requirements.txt
+│
+├── engine/
+│   ├── game_loop.py
+│   ├── tick_system.py
+│   ├── event_engine.py
+│   ├── save_system.py
+│   ├── simulation_layers.py
+│   └── world_state.py
+│
+├── ai/
+│   ├── utility_ai.py
+│   ├── behavior_tree.py
+│   ├── npc_brain.py
+│   ├── faction_ai.py
+│   ├── war_ai.py
+│   └── economy_ai.py
+│
+├── combat/
+│   ├── combat_engine.py
+│   ├── status_effects.py
+│   ├── targeting.py
+│   ├── weapons.py
+│   └── magic_system.py
+│
+├── economy/
+│   ├── economy_engine.py
+│   ├── taxation.py
+│   ├── supply_chain.py
+│   ├── market.py
+│   ├── trade_routes.py
+│   └── company_value.py
+│
+├── world/
+│   ├── regions.py
+│   ├── cities.py
+│   ├── weather.py
+│   ├── environment.py
+│   ├── harvesting.py
+│   └── transportation.py
+│
+├── factions/
+│   ├── factions.py
+│   ├── diplomacy.py
+│   ├── wars.py
+│   └── territory.py
+│
+├── npc/
+│   ├── npc_generator.py
+│   ├── memory_system.py
+│   ├── relationships.py
+│   └── schedules.py
+│
+├── codex/
+│   ├── codex_system.py
+│   ├── world_log.py
+│   ├── bestiary.py
+│   ├── magic_archive.py
+│   └── history_archive.py
+│
+├── crafting/
+│   ├── crafting_engine.py
+│   ├── recipes.py
+│   ├── alchemy.py
+│   └── engineering.py
+│
+├── governance/
+│   ├── city_management.py
+│   ├── laws.py
+│   ├── propaganda.py
+│   └── public_welfare.py
+│
+├── ui/
+│   ├── menus.py
+│   ├── inventory_ui.py
+│   ├── combat_ui.py
+│   └── map_ui.py
+│
+└── database/
+    ├── models.py
+    ├── db.py
+    └── migrations/
+36. RECOMMENDED PYTHON LIBRARIES
+FastAPI
+SQLAlchemy
+Pydantic
+Textual
+NumPy
+NetworkX
+Rich
+Alembic
+Psycopg2
+37. FINAL DESIGN PHILOSOPHY
+
+Chronicles of Aetherion is designed as:
+
+A living industrial civilization simulator
+A consequence-heavy RPG
+A dynamic AI sandbox
+A procedural history generator
+A political and economic simulation
+A persistent offline world engine
+
+Every system affects every other system.
+
+The world evolves independently of the player.
