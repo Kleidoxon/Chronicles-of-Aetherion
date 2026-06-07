@@ -158,11 +158,28 @@ class ItemGenerator:
             rarity.value * 5
         )
 
+        item_level = (
+            rarity.value * 10
+        )
+
+        value = (
+            rarity.value * 100
+        )
+
         return Weapon(
 
             name=name,
 
             rarity=rarity.name,
 
-            attack_bonus=attack_bonus
-        )
+            attack_bonus=attack_bonus,
+
+            item_level=item_level,
+
+            required_level=max(
+            1,
+            item_level // 2
+        ),
+
+        value=value
+    )
