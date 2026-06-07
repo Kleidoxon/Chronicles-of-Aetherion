@@ -101,3 +101,15 @@ class EquipmentManager:
                 print(
                     f"{slot.value}: Empty"
                 )
+
+    def total_weight(self):
+
+        total = 0
+
+        for item in self.equipment.values():
+
+            if item:
+
+                total += item.weight
+
+        return total            
